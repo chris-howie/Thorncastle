@@ -1,6 +1,6 @@
 * * *
 
-# New Exercise
+# Exercise 1 (test)
 
 <!--
 EXERCISE TODO #1: Replace "New Exercise" in the heading above with the name
