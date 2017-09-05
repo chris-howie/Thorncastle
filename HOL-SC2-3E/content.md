@@ -160,7 +160,7 @@ In this procedure we will inspect Cloud App Security app connectors.
 9. Click **Close** to return to the **Connected apps** list.
 
 
-### Inspect policies
+### Inspect default policies
 
 Cloud App Security policies allow you to control how your users interact with sanctioned SaaS apps. The following policy templates are available to you:
 
@@ -170,15 +170,38 @@ Cloud App Security policies allow you to control how your users interact with sa
 * **Cloud discovery anomaly detection policy**: Tracks unusual behavior in cloud discovery processes
 * **File policy**: Tracks file types and file content (for instance, locating personally identifiable information)
 
+1. From the Cloud App Security top navigation bar, click **Control > Policies**. By default, Cloud App Security enables two policies:
+
+* General anomaly detection
+* Cloud Discovery anomaly detection
+
+2. In the **Policy** list, click the **Settings** gear. The **Edit anomaly detection policy** page appears. Besides the name of the base template, policy name, description, and category, the components of an app policy are as follows:
+
+* **Create filters for the policy**: Apply either to all monitored traffic or specific traffic as defined by a filter expression
+* **Risk factors**: Determine which activities should be tracked by the policy (Logon failures, Location, Risky IP address, and so forth)
+* **Alerts**: Choose an alert notification threshold and whether you want email and/or SMS alerts
+
+> **Note**: Cloud App Security may take up to one week before it has enough data to generate a baseline and calculate alert-worthy deviations.
+
+3. Click **Cancel** to return to the **Policies** page.
+
+### Create a new policy from a template
+
+In this exercise, you will create a new cloud app policy that 
+
+1. From the Cloud App Security top navigation bar, click **Control > Templates**.
+2. From the **Type** drop-down menu on the **Policy templates** page, select **File policy**. Each policy categories contains a number of predefined policies upon which you can deploy your own organizational policies.
+3. From the **Category** drop-down menu, choose **DLP**.
+
+> **Note**: DLP stands for *Data Loss Prevention*. For example, a policy that prevents users from forwarding company confidential files to external email domains is DLP.
+
+4. From the filtered template list, 
 
 
 
 
 
 
-
-
-### Create a policy
 
 
 
