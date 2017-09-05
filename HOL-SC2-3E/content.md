@@ -160,6 +160,38 @@ In this procedure we will inspect Cloud App Security app connectors.
 9. Click **Close** to return to the **Connected apps** list.
 
 
+### Inspect policies
+
+Cloud App Security policies allow you to control how your users interact with sanctioned SaaS apps. The following policy templates are available to you:
+
+* **Activity policy**: Tracks specific user activities in a connected app
+* **Anomaly detection policy**: Tracks for unusual app activity
+* **App discovery policy**: Tracks new app installs within your organization
+* **Cloud discovery anomaly detection policy**: Tracks unusual behavior in cloud discovery processes
+* **File policy**: Tracks file types and file content (for instance, locating personally identifiable information)
+
+
+
+
+
+
+
+
+
+### Create a policy
+
+
+
+
+
+### Perform day-to-day management tasks
+
+
+
+
+
+
+
 
 
 
