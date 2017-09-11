@@ -1,10 +1,11 @@
 * * *
 
-# New Exercise
+# Configure Safe Attachments 
+<!-- Exercise 1 -->
 
 <!--
 EXERCISE TODO #1: Replace "New Exercise" in the heading above with the name
-of your new exercise.
+of your new exercise. 
 -->
 
 <!--
@@ -190,3 +191,29 @@ contents of the exercise template you want to use over this comment. You can fin
 the exercise templates here:
 https://github.com/LearnOnDemandSystems/idl-md/blob/master/templates
 -->
+
+# Send malicious attachment
+<!-- Exercise 2 -->
+
+
+# Review malicious attachment as intended recipient
+<!-- Exercise 3  -->
+
+# Review message as an administrator
+<!-- Exercise 4  -->
+
+# Run Advanced Threat Protection by Disposition report
+<!-- Exercise 5  -->
+
+# Configure Safe Links
+<!-- Exercise 6  -->
+
+# Send malicious links
+<!-- Exercise 7  -->
+
+# Review message containing malicious links
+<!-- Exercise 8  -->
+
+# Run URL Trace report
+<!-- Exercise 9  -->
+
