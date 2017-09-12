@@ -1,53 +1,140 @@
-* * *
+# Configure Safe Attachments
 
-# Configure Safe Attachments 
 <!-- Exercise 1 -->
-
-<!--
-EXERCISE TODO #1: Replace "New Exercise" in the heading above with the name
-of your new exercise. 
--->
-
 <!--
 EXERCISE TODO #2: Set the IntroductionUri and CompletionUri values in the quoted
 properties below. Both IntroductionUri and CompletionUri may be relative (within
 GitHub) or absolute uris. Remove any values that you don't need, removing the
 entire quote if you don't need any of the values. Then delete this comment.
--->
+
 
 >LODSProperties
 >* IntroductionUri = 
 >* CompletionUri = 
+-->
 
 ## E1 INTRODUCTION MESSAGE
 
-Safe Attachments is a new Advanced Threat Protection feature available in Office 365 which allows tenant administrators to check if emaill attachments are malicious and take action on those that are potentially malicious. In this exercise, you will create a Safe Attachment policy to help prevent malicious attachments being circulated within your Exchange Online environment, including redirecting potential threats to administrators and replacing the original attachment sent to the recipient with a removal notification. 
+Safe Attachments is a new Advanced Threat Protection feature available in Office 365 which allows tenant administrators to check if emaill attachments are malicious and take action on those that are potentially malicious. In this exercise, you will create a Safe Attachment policy to help prevent malicious attachments being circulated within your Exchange Online environment, including redirecting potential threats to administrators and replacing the original attachment sent to the recipient with a removal notification.
 
-NOTE: This lab assumes you have previously created an Office 365 E5 trial subscription.  
+NOTE: This lab assumes you have previously created an Office 365 E5 trial subscription. You will need two user accounts (Lori and Peter), and one administrator account (Mark).
 
 ## E1 COMPLETION MESSAGE
 
 You have now successfully configured a Safe Attachments policy.
 
-<hr>
+### Open the Office 365 Admin Center
 
-### New Task
+Log into <Comp> as **Mark**, with a password of **Passw0rd**. Open **Internet Explorer** and Log into **https://portal.office.com/adminportal/home#/homepage** using the Office 365 tenant you previously created for testing purposes.
 
-<!--
-TASK TODO #1: Replace "New Task" in the heading above with the name of your
-new task and replace this comment with the task instruction message. For the
-best results, try to keep this message short (200 characters or less) and to a
-single paragraph.
--->
+### Navigate to the Security & Compliance Center
+
+From the left-hand navigation menu, click **Admin Centers**, and then click **Security & Compliance** to open the Security & Compliance center.
+
+### Navigate to Safe Attachments
+
+In the Security & Compliance center, from the left-hand navigation menu, click **Threat Management** and then click **Safe attachments**.
+
+### Create new Safe Attachments policy
+
+Click the **plus** icon to open the new safe attachments policy dialog box. In the dialog box, name the policy **Replace and Redirect Safe Attachments Policy**.
+
+### Select malware response
+
+In the Safe attachments unknown malware response section, select **Replace** from the list. This will block the attachment but deliver the remaining message content to the recipient.
+
+### Enable redirection
+
+In the Redirect attachment on detection section, select **Enable redirect** and then type Marks email address (eg. **Mark@Contoso.onmicrosoft.com**).
 
 #### :warning: ALERT
 
-<!--
-TASK TODO #2: Replace this comment with any warning text that you want
-displayed when a student advances to this task. If you don't have any warning
-text to display for this task, delete this comment and the ALERT heading
-before it.
---> 
+Be sure to use the email address from your tenant. It will look something like **Mark@<yourtenant>.onmicrosoft.com**.
+
+### Apply to all users in the tenant
+
+In the Applied To section, from the drop-down list, choose **The recipient domain is** and then click **add condition** to open the domain selection dialog box. Double-click **your domain** and then click **OK**. Click **Save** to complete the policy.
+
+# Send malicious attachment
+
+<!-- Exercise 2 -->
+
+## E2 INTRODUCTION MESSAGE
+
+In this exercise you will attempt to send a malicious attachment from one user to another. This message will include a subject, body and malicious attachment. 
+
+## E2 COMPLETION MESSAGE
+
+You have successfully sent an example malicious attachment via email. 
+
+# Review malicious attachment as intended recipient
+
+<!-- Exercise 3  -->
+
+## E3 INTRODUCTION MESSAGE
+
+In this exercise, you will review the message you sent in the previous exercise. With the Safe Attachment policy you created in the first exercise, the intended recipient should receive the message with the original attachment removed and replaced with an indication that it was removed. 
+
+## E3 COMPLETION MESSAGE
+
+You have now seen the user experience when Safe Attachments determines an attachment is malicious. 
+
+# Review message as an administrator
+
+<!-- Exercise 4  -->
+
+## E4 INTRODUCTION MESSAGE
+
+Since the Safe Attachment policy you created in the first exercise was configured to redirect malicious attachments to the administrator, in this exercise you will view what that redirected message looks like. 
+
+## E4 COMPLETION MESSAGE
+
+<!-- -->
+
+# Run Advanced Threat Protection by Disposition report
+
+<!-- Exercise 5  -->
+
+## E5 INTRODUCTION MESSAGE
+
+<!-- -->
+
+## E5 COMPLETION MESSAGE
+<!-- -->
+
+# Configure Safe Links  
+<!-- Exercise 6  -->
+## E6 INTRODUCTION MESSAGE
+<!-- -->
+
+## E6 COMPLETION MESSAGE
+<!-- -->
+
+# Send malicious links
+<!-- Exercise 7  -->
+## E7 INTRODUCTION MESSAGE
+<!-- -->
+
+## E7 COMPLETION MESSAGE
+<!-- -->
+
+# Review message containing malicious links
+<!-- Exercise 8  -->
+## E8 INTRODUCTION MESSAGE
+<!-- -->
+
+## E8 COMPLETION MESSAGE
+<!-- -->
+
+# Run URL Trace report
+<!-- Exercise 9  -->
+## E9 INTRODUCTION MESSAGE
+<!-- -->
+
+## E9 COMPLETION MESSAGE
+<!-- -->
+
+
 
 #### :bulb: KNOWLEDGE
 
@@ -186,83 +273,3 @@ contents of the exercise template you want to use over this comment. You can fin
 the exercise templates here:
 https://github.com/LearnOnDemandSystems/idl-md/blob/master/templates
 -->
-
-# Send malicious attachment
-
-<!-- Exercise 2 -->
-
-## E2 INTRODUCTION MESSAGE
-
-In this exercise you will attempt to send a malicious attachment from one user to another. This message will include a subject, body and malicious attachment. 
-
-## E2 COMPLETION MESSAGE
-
-You have successfully sent an example malicious attachment via email. 
-
-# Review malicious attachment as intended recipient
-
-<!-- Exercise 3  -->
-
-## E3 INTRODUCTION MESSAGE
-
-In this exercise, you will review the message you sent in the previous exercise. With the Safe Attachment policy you created in the first exercise, the intended recipient should receive the message with the original attachment removed and replaced with an indication that it was removed. 
-
-## E3 COMPLETION MESSAGE
-
-You have now seen the user experience when Safe Attachments determines an attachment is malicious. 
-
-# Review message as an administrator
-
-<!-- Exercise 4  -->
-
-## E4 INTRODUCTION MESSAGE
-
-Since the Safe Attachment policy you created in the first exercise was configured to redirect malicious attachments to the administrator, in this exercise you will view what that redirected message looks like. 
-
-## E4 COMPLETION MESSAGE
-
-<!-- -->
-
-# Run Advanced Threat Protection by Disposition report
-
-<!-- Exercise 5  -->
-
-## E5 INTRODUCTION MESSAGE
-
-<!-- -->
-
-## E5 COMPLETION MESSAGE
-<!-- -->
-
-# Configure Safe Links  
-<!-- Exercise 6  -->
-## E6 INTRODUCTION MESSAGE
-<!-- -->
-
-## E6 COMPLETION MESSAGE
-<!-- -->
-
-# Send malicious links
-<!-- Exercise 7  -->
-## E7 INTRODUCTION MESSAGE
-<!-- -->
-
-## E7 COMPLETION MESSAGE
-<!-- -->
-
-# Review message containing malicious links
-<!-- Exercise 8  -->
-## E8 INTRODUCTION MESSAGE
-<!-- -->
-
-## E8 COMPLETION MESSAGE
-<!-- -->
-
-# Run URL Trace report
-<!-- Exercise 9  -->
-## E9 INTRODUCTION MESSAGE
-<!-- -->
-
-## E9 COMPLETION MESSAGE
-<!-- -->
-
