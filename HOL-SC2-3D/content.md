@@ -25,7 +25,7 @@ You have now successfully configured a Safe Attachments policy.
 
 ### Open the Office 365 Admin Center
 
-Log into <Comp> as **Mark**, with a password of **Passw0rd**. Open **Internet Explorer** and Log into **https://portal.office.com/adminportal/home#/homepage** using the Office 365 tenant you previously created for testing purposes.
+Log into <Comp> as **Mark**, with a password of **Passw0rd**. Open **Internet Explorer** and Log into **https://portal.office.com/adminportal/home#/homepage** as **Mark@<yourtenant>.onmicrosoft.com** from the Office 365 tenant you previously created for testing purposes.
 
 ### Navigate to the Security & Compliance Center
 
@@ -55,6 +55,10 @@ Be sure to use the email address from your tenant. It will look something like *
 
 In the Applied To section, from the drop-down list, choose **The recipient domain is** and then click **add condition** to open the domain selection dialog box. Double-click **your domain** and then click **OK**. Click **Save** to complete the policy.
 
+### Sign out of Office 365
+
+Sign out of Office 365 and close Internet Explorer.
+
 # Send malicious attachment
 
 <!-- Exercise 2 -->
@@ -66,6 +70,19 @@ In this exercise you will attempt to send a malicious attachment from one user t
 ## E2 COMPLETION MESSAGE
 
 You have successfully sent an example malicious attachment via email. 
+
+### Log into Lori's email
+
+Open **Internet Explorer** and Log into **https://outlook.office.com/** as **Lori@<yourtenant>.onmicrosoft.com** from the Office 365 tenant you previously created for testing purposes.
+
+### Create a new message to Peter
+
+Click **New** and type **Peter@<yourdomain>.onmicrosoft.com** in the To field. In the subject line, type **This is test malware**. In the message box (body of the email), type **This is an example of safe attachments blocking malware**.
+
+### Add malicious attachment
+
+On the menu, click **Attach**, then click **Computer** to open an explorer window. Navigate to **C:\Extras\ExampleAttachment** and select **examplemalware.abc**. 
+
 
 # Review malicious attachment as intended recipient
 
