@@ -19,20 +19,15 @@ entire quote if you don't need any of the values. Then delete this comment.
 >* IntroductionUri = 
 >* CompletionUri = 
 
-## INTRODUCTION MESSAGE
+## E1 INTRODUCTION MESSAGE
 
-<!--
-EXERCISE TODO #3: Replace this comment with the introduction message for this
-exercise. This message can span multiple paragraphs if necessary.
--->
+Safe Attachments is a new Advanced Threat Protection feature available in Office 365 which allows tenant administrators to check if emaill attachments are malicious and take action on those that are potentially malicious. In this exercise, you will create a Safe Attachment policy to help prevent malicious attachments being circulated within your Exchange Online environment, including redirecting potential threats to administrators and replacing the original attachment sent to the recipient with a removal notification. 
 
-## COMPLETION MESSAGE
+NOTE: This lab assumes you have previously created an Office 365 E5 trial subscription.  
 
-<!--
-EXERCISE TODO #4: Replace this comment with a completion message for this
-exercise, or delete the COMPLETION MESSAGE heading and this comment if you do
-not need a completion message.
--->
+## E1 COMPLETION MESSAGE
+
+You have now successfully configured a Safe Attachments policy.
 
 <hr>
 
@@ -193,27 +188,81 @@ https://github.com/LearnOnDemandSystems/idl-md/blob/master/templates
 -->
 
 # Send malicious attachment
+
 <!-- Exercise 2 -->
 
+## E2 INTRODUCTION MESSAGE
+
+In this exercise you will attempt to send a malicious attachment from one user to another. This message will include a subject, body and malicious attachment. 
+
+## E2 COMPLETION MESSAGE
+
+You have successfully sent an example malicious attachment via email. 
 
 # Review malicious attachment as intended recipient
+
 <!-- Exercise 3  -->
 
+## E3 INTRODUCTION MESSAGE
+
+In this exercise, you will review the message you sent in the previous exercise. With the Safe Attachment policy you created in the first exercise, the intended recipient should receive the message with the original attachment removed and replaced with an indication that it was removed. 
+
+## E3 COMPLETION MESSAGE
+
+You have now seen the user experience when Safe Attachments determines an attachment is malicious. 
+
 # Review message as an administrator
+
 <!-- Exercise 4  -->
 
+## E4 INTRODUCTION MESSAGE
+
+Since the Safe Attachment policy you created in the first exercise was configured to redirect malicious attachments to the administrator, in this exercise you will view what that redirected message looks like. 
+
+## E4 COMPLETION MESSAGE
+
+<!-- -->
+
 # Run Advanced Threat Protection by Disposition report
+
 <!-- Exercise 5  -->
 
-# Configure Safe Links
+## E5 INTRODUCTION MESSAGE
+
+<!-- -->
+
+## E5 COMPLETION MESSAGE
+<!-- -->
+
+# Configure Safe Links  
 <!-- Exercise 6  -->
+## E6 INTRODUCTION MESSAGE
+<!-- -->
+
+## E6 COMPLETION MESSAGE
+<!-- -->
 
 # Send malicious links
 <!-- Exercise 7  -->
+## E7 INTRODUCTION MESSAGE
+<!-- -->
+
+## E7 COMPLETION MESSAGE
+<!-- -->
 
 # Review message containing malicious links
 <!-- Exercise 8  -->
+## E8 INTRODUCTION MESSAGE
+<!-- -->
+
+## E8 COMPLETION MESSAGE
+<!-- -->
 
 # Run URL Trace report
 <!-- Exercise 9  -->
+## E9 INTRODUCTION MESSAGE
+<!-- -->
+
+## E9 COMPLETION MESSAGE
+<!-- -->
 
