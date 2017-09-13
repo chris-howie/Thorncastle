@@ -7,7 +7,7 @@ properties below. Both IntroductionUri and CompletionUri may be relative (within
 GitHub) or absolute uris. Remove any values that you don't need, removing the
 entire quote if you don't need any of the values. Then delete this comment.
 
-
+   
 >LODSProperties
 >* IntroductionUri = 
 >* CompletionUri = 
@@ -15,17 +15,17 @@ entire quote if you don't need any of the values. Then delete this comment.
 
 ## INTRODUCTION MESSAGE
 
-Safe Attachments is a new Advanced Threat Protection feature available in Office 365 which allows tenant administrators to check if email attachments are malicious and take action on those that are potentially malicious. In this exercise, you will create a Safe Attachment policy to help prevent malicious attachments being circulated within your Exchange Online environment, including redirecting potential threats to administrators and replacing the original attachment sent to the recipient with a removal notification.
+**Safe Attachments** is a new Advanced Threat Protection feature available in Office 365 which reviews email attachments and takes action on those that are potentially malicious. In this exercise, you will create a Safe Attachment policy to help prevent malicious attachments being circulated within your Exchange Online environment. This policy will redirect potential threats to administrators and remove the attachment from the message before it is delivered.
 
 NOTE: This lab assumes you have previously created an Office 365 E5 trial subscription. You will need two user accounts (Lori and Peter), and one administrator account (Mark).
 
 ## COMPLETION MESSAGE
 
-You have now successfully configured a Safe Attachments policy.
+You have now successfully created a Safe Attachments policy.
 
 ### Open the Office 365 Admin Center
 
-Log into <Comp> as **Mark**, with a password of **Passw0rd**. Open **Internet Explorer** and Log into **https://portal.office.com/adminportal/home#/homepage** as **Mark@yourdomain.onmicrosoft.com** from the Office 365 tenant you previously created for testing purposes.
+Log into TBD as **Mark**, with a password of **Passw0rd**. Open **Internet Explorer** and Log into **https://portal.office.com/adminportal/home#/homepage** as **Mark@yourdomain.onmicrosoft.com** from the Office 365 tenant you previously created for testing purposes.
 
 ### Navigate to the Security & Compliance Center
 
@@ -61,11 +61,9 @@ Sign out of Office 365 and close Internet Explorer.
 
 # Send malicious attachment
 
-<!-- Exercise 2 -->
-
 ## INTRODUCTION MESSAGE
 
-In this exercise you will attempt to send a malicious attachment from one user to another. This message will include a subject, body and malicious attachment. 
+In this exercise you will send a malicious attachment from one user to another via email. This email message will include a subject, body and malicious attachment.
 
 ## COMPLETION MESSAGE
 
@@ -95,11 +93,11 @@ You will come back and review the message later as Safe Attachments can take sev
 
 ## INTRODUCTION MESSAGE
 
-Safe Links is a new Advanced Threat Protection feature available in Office 365 which allows tenant administrators to block or redirect potentially malicious links to a warning page. In this exercise, you will create a Safe Links policy to help prevent malicious URLs from being accessed by users in your organizations.
+Safe Links is a new Advanced Threat Protection feature available in Office 365 which allows tenant administrators to block or redirect potentially malicious links to a warning page. When Safe Links recognizes a link that is neither on the block list nor the exemption list, the link is evaluated for malicious properties (such as redirecting to another site). In this exercise, you will create a Safe Links policy to help prevent malicious URLs from being accessed by users in your organizations.
 
 ## COMPLETION MESSAGE
 
-You have successfully created a Safe Links policy and enabled it for your test Office 365 tenant. 
+You have successfully created a Safe Links policy and enabled it for your test Office 365 tenant.
 
 ### Open the Office 365 Admin Center
 
@@ -137,11 +135,11 @@ Sign out of Office 365 and close Internet Explorer.
 
 ## INTRODUCTION MESSAGE
 
-In this exercise, you will send an email as Lori containing a potentially malicious link 
+In this exercise, you will send an email as Lori containing a potentially malicious link from a personal account to act as an attacker. 
 
 ## COMPLETION MESSAGE
 
-<!-- -->
+You have successfully tested the Safe Links policy. 
 
 ### Log into Lori's email
 
@@ -163,7 +161,7 @@ Sign out of Office 365 and close Internet Explorer.
 
 ## INTRODUCTION MESSAGE
 
-In this exercise, you will review the message you sent to Peter in the previous exercise and see what happens when you attempt to access each URL in the message. 
+In this exercise, you will review the message you sent to Peter in the previous exercise and see what happens when you attempt to access each URL in the message.
 
 ## COMPLETION MESSAGE
 
@@ -171,7 +169,7 @@ In this exercise, you will review the message you sent to Peter in the previous 
 
 ### Sign into Peter's email
 
-Open **Internet Explorer** and Log into **https://outlook.office.com/** as **Peter@<yourtenant>.onmicrosoft.com** from the Office 365 tenant you previously created for testing purposes. Then click **Mail**.
+Open **Internet Explorer** and Log into **https://outlook.office.com/** as **Peter@yourdomain.onmicrosoft.com** from the Office 365 tenant you previously created for testing purposes. Then click **Mail**.
 
 ### Review Lori's message
 
@@ -227,13 +225,25 @@ From the left-hand navigation menu, click **Admin Centers**, and then click **Ex
 
 From the left-hand navigation menu, click **mail flow** and then click **url trace** from the top menu. Scroll down to the bottom and click **Search** to run the report. 
 
+### Review the report
+
+Click the **Knowledge (bulb) icon**.
+
+#### :bulb: KNOWLEDGE
+
+In this report, you can see each URL that you clicked in the email sent to Peter, except for the exempt one (http://goodurl.contoso.com). Notice the URL, blocked and clicked through columns. Yuo can see that it shows http://badurl.contoso.com as being blocked but that you clicked through it anyway. 
+
+### Sign out of Office 365
+
+Close the report, sign out of Office 365 and close Internet Explorer.
+
 # Review malicious attachment as intended recipient
 
 <!-- Exercise 3  -->
 
 ## INTRODUCTION MESSAGE
 
-In this exercise, you will review the message you sent in the previous exercise. With the Safe Attachment policy you created in the first exercise, the intended recipient should receive the message with the original attachment removed and replaced with an indication that it was removed. 
+In this exercise, you will review the message you sent to Peter in a previous exercise. With the Safe Attachment policy you created in the first exercise, the intended recipient should receive the message with the original attachment removed.
 
 ## COMPLETION MESSAGE
 
@@ -257,15 +267,14 @@ Sign out of Office 365 and close Internet Explorer.
 
 # Review message as an administrator
 
-<!-- Exercise 4  -->
 
 ## INTRODUCTION MESSAGE
 
-Since the Safe Attachment policy you created in the first exercise was configured to redirect malicious attachments to the administrator, in this exercise you will view what that redirected message looks like. 
+Since the Safe Attachment policy you created in the first exercise was configured to redirect malicious attachments to the administrator, in this exercise you will view what that redirected message looks like after it is sent to Mark.  
 
 ## COMPLETION MESSAGE
 
-<!-- -->
+You have seen the administrator experience when a malicious attachment is redirected. 
 
 ### Sign into Mark's email
 
