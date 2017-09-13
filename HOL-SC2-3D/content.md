@@ -337,7 +337,7 @@ a video you want to link to this task. This can be a relative (withing GitHub)
 or absolute uri. Then set the ShowAutomatically property to one of the
 following:
 - No, if you only want the video to appear when the student clicks on the video
-camera button;
+camera button;  w 
 - Once, if you want the video to appear automatically the first time the
 student advances to this task; or
 - EveryTime, if you want the video to appear automatically every time the
